@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
+
+
+{% if Do_list_data %}
+<ul>
+  {% for data in Do_list_data %}
+    <button class="content" onclick="window.location.href='{% url 'main:detail' data.id %}'">{{ data.content }}</button><br>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No list are available.</p>
+{% endif %}
+<br>
+<button class="commit" onclick="window.location.href='{% url 'main:add' %}'">추가하기</button>

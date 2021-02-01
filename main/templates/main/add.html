@@ -1,0 +1,6 @@
+<form action="" method="POST">
+{% csrf_token %}
+  내용: <br><textarea name="content" wrap = "virtual" rows = "1" cols="50"></textarea><br>
+  상세내용: <br><textarea name="information" wrap = "virtual" rows = "5" cols="50"></textarea><br><br>
+  <button type="submit" onclick="window.location.href='{% url 'main:add' %}'">등록하기</button>
+</form>

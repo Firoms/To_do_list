@@ -5,7 +5,8 @@ from django.db import models
 class Do_list(models.Model):
     content = models.CharField(max_length=50)
     information = models.TextField()
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField()
+    modify_date = models.DateTimeField(null=True)
     check = models.BooleanField(default=False)
     state = models.BooleanField(default=True)
 
