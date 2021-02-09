@@ -1,6 +1,19 @@
-<form action="" method="POST">
-{% csrf_token %}
-  내용: <br><textarea name="content" wrap = "virtual" rows = "1" cols="50"></textarea><br>
-  상세내용: <br><textarea name="information" wrap = "virtual" rows = "5" cols="50"></textarea><br><br>
-  <button type="submit" onclick="window.location.href='{% url 'main:add' %}'">등록하기</button>
-</form>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do list</title>
+    <meta name="description" content="할 일 목록들을 정리하는 To-do list">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
+    
+  
+  </head>
+  <form action="" method="POST">
+  {% csrf_token %}
+    내용: <br><textarea name="content" wrap = "virtual" rows = "1" cols="50"></textarea><br>
+    상세내용: <br><textarea name="information" wrap = "virtual" rows = "5" cols="50"></textarea><br><br>
+    <button type="submit" onclick="window.location.href='{% url 'main:add' %}'">등록하기</button>
+  </form>

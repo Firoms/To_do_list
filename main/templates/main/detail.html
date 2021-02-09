@@ -1,10 +1,23 @@
-{% if id_data %}
-<a>{{ id_data.information }}</a><br>
-<button class="commit" onclick="window.location.href='{% url 'main:change' id_data.id %}'">수정하기</button>
-<form action="" method="POST">
-{% csrf_token %}
-<button class="commit" onclick="window.location.href='{% url 'main:detail' id_data.id %}'">삭제하기</button>
-</form>
-{% else %}
-<p>No information are available.</p>
-{% endif %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do list</title>
+    <meta name="description" content="할 일 목록들을 정리하는 To-do list">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
+    
+  
+  </head>
+    {% if id_data %}
+    <a>{{ id_data.information }}</a><br>
+    <button class="commit" onclick="window.location.href='{% url 'main:change' id_data.id %}'">수정하기</button>
+    <form action="" method="POST">
+    {% csrf_token %}
+    <button class="commit" onclick="window.location.href='{% url 'main:detail' id_data.id %}'">삭제하기</button>
+    </form>
+    {% else %}
+    <p>No information are available.</p>
+    {% endif %}

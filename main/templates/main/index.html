@@ -1,15 +1,65 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do list</title>
+    <meta name="description" content="할 일 목록들을 정리하는 To-do list">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
+    
+  
+  </head>
 
 
-{% if Do_list_data %}
-<ul>
-  {% for data in Do_list_data %}
-    <button class="content" onclick="window.location.href='{% url 'main:detail' data.id %}'">{{ data.content }}</button><br>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No list are available.</p>
-{% endif %}
-<br>
-<button class="commit" onclick="window.location.href='{% url 'main:add' %}'">추가하기</button>
+
+
+
+  <body>
+    <header class="page-header wrapper">
+      <div id="home" class="big-bg">
+        <nav>
+          <ul class="main-nav">
+            <li class="button"><a href="{% url 'main:add' %}">추가하기</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="content wrapper">    
+      {% if Do_list_data %}
+        <ul class="main-con">
+          {% for data in Do_list_data %}
+            <li><a href="{% url 'main:detail' data.id %}">{{ data.content }}</a></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No list are available.</p>
+      {% endif %}
+      <br>
+    </div>
+  </body>
+
+
+
+
+
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy; 2021 Firoms</small></p>
+      <p><small>  edisonmessi@naver.com</small></p>
+      <p>
+        <a href="https://github.com/Firoms">Github /</a>
+        <a href="https://firoms.tistory.com/">Tistory /</a>
+        <a href="https://www.youtube.com/channel/UCvjZ9NUicMKNc2GzQoFeyRA/">Youtube</a>
+      </p>
+    </div>
+  </footer>
+
+
+  </html>
+
+
+
+

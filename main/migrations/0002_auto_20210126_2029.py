@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0001_initial'),
+        ("main", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='do_list',
-            name='modify_date',
+            model_name="do_list",
+            name="modify_date",
             field=models.DateTimeField(null=True),
         ),
         migrations.AlterField(
-            model_name='do_list',
-            name='pub_date',
+            model_name="do_list",
+            name="pub_date",
             field=models.DateTimeField(),
         ),
     ]
