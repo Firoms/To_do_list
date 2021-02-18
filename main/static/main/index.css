@@ -1,117 +1,40 @@
-@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-@charset "UTF-8";
-
-
-html {
+html{
     font-size: 100%;
 }
-body{
-    font-family:"Nanum Pen Script", "Comic Sans MS";
-    line-height: 1.7;
-    color: #432
-}
-a{
-    text-decoration: none;
-}
-img{
-    max-width: 100%;
-}
 
-/* Header */
-.big-bg {
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-}
-#home {
+body {
     background-image: url(images/To_do_list_bg.png);
-    height: 250px;
-    width: 100%;
-    margin-bottom: 40px;
-}
-.main-nav {
-    display: flex;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    margin-top: 130px;
-    list-style: none;
-}
-.main-nav li {
-    margin-left: 36px;
-}
-.main-nav a {
-    color: #432;
-}
-.main-nav a:hover {
-    color: #0bd;
+    background-size: contain;
+    /* 
+    비율을 유지하면서 최대한의 크기로 출력
+    */
+    background-position: center top;
 }
 
-.main-con {
+
+main{
+    max-width: max-content;
+    /* 최대 넓이를 기준으로 하게 설정 */
+    /* margin : 0 auto;  */
+    /* 가운데 정렬 */
+    padding: 3%;
+    /* 상하좌우 여백 */
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    /* 정렬 기준 flex > 가로 */
+    /* 오른쪽으로 붙임 */
+    margin-top: 9.5%;
+    margin-right: 10%;
+}
+nav button{
+    margin-right: 3%;
+    font-size: 120%;
     font-weight: bold;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-transform: uppercase;
-    margin-top: 100px;
-    list-style: none;
-}
-.main-con li {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid pink;
-}
-.main-con a{
-    font-size: 30pt;
-    color: #432;
-}
-.main-con a:hover{
-    color: #0bd;
-}
-
-.page-header{
-    display: flex;
-    justify-content: left;
-}
-
-
-.content {
-    text-align: left;
-    margin-top: 10%;
-}
-.content li{
-    font-size: 1.125rem;
-    margin: 10px 0 42px;
-    list-style: none;
-}
-
-
-.button{
-    font-size: 1.5rem;
-    background: #0bd;
-    color: #fff;
-    border-radius: 5px;
-    padding: 9px 20px;
-}
-.button:hover{
-    background: #0090aa;
-}
-
-/* footer */
-footer {
-    background: #432;
-    text-align: center;
-    padding: 26px 0;
-    
-}
-footer p {
-    color: #fff;
-    font-size: 15pt;
-}
-footer a{
-    font-size: 16pt;
-    text-decoration: none;
-    color: blue;
+    padding: 0.5%;
+    border-width: 2px;
+    border-style: solid;
+    background-color: aqua;
 }

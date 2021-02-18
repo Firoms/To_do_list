@@ -2,18 +2,38 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>To-do list</title>
     <meta name="description" content="할 일 목록들을 정리하는 To-do list">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% load static %}
+    <title>To-do list</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
-    
-  
   </head>
-<form action="" method="POST">
-{% csrf_token %}
-  내용: <br><textarea name="content" wrap = "virtual" rows = "1" cols="50">{{ id_data.content }}</textarea><br>
-  상세내용: <br><textarea name="information" wrap = "virtual" rows = "5" cols="50">{{ id_data.information }}</textarea><br><br>
-  <button type="submit" onclick="window.location.href='{% url 'main:change' id_data.id %}'">수정하기</button>
-</form>
+
+  <body>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <header>
+        <nav>
+          <button type="submit" onclick="window.location.href='{% url 'main:change' id_data.id %}'">수정하기</button>
+        </nav>
+      </header>
+
+
+      <main>
+            내용: <textarea name="content" wrap = "virtual" rows = "1" cols="50">{{ id_data.content }}</textarea>
+            상세내용: <textarea name="information" wrap = "virtual" rows = "3" cols="50">{{ id_data.information }}</textarea>
+      </main>
+    </form>
+
+    <footer>
+      <p><small>&copy; 2021 Firoms</small></p>
+      <p><small>  edisonmessi@naver.com</small></p>
+      <p>
+      <a href="https://github.com/Firoms">Github /</a>
+      <a href="https://firoms.tistory.com/">Tistory /</a>
+      <a href="https://www.youtube.com/channel/UCvjZ9NUicMKNc2GzQoFeyRA/">Youtube</a>
+      </p>
+    </footer>
+  </body>
+
+</html>
