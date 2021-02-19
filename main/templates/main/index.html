@@ -12,10 +12,6 @@
 
   <body>
     <header>
-      <nav>
-        <button type="submit" onclick="window.location.href='{% url 'main:add' %}'">추가하기</button>
-        <button type="submit" onclick="window.location.href='{% url 'main:add' %}'">추가하기</button>
-      </nav>
     </header>
 
     <main>
@@ -26,6 +22,9 @@
       {% else %}
       <p>No list are available.</p>
       {% endif %}
+      <form action="{% url 'main:add' %}" method="GET">
+          <input type="submit" name="" value="추가하기">
+      </form>
     </main>
 
     <footer>

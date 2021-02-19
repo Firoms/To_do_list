@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
 html{
     font-size: 100%;
 }
@@ -19,22 +21,17 @@ main{
     /* 가운데 정렬 */
     padding: 3%;
     /* 상하좌우 여백 */
-}
-
-nav{
     display: flex;
-    justify-content: flex-end;
-    /* 정렬 기준 flex > 가로 */
-    /* 오른쪽으로 붙임 */
-    margin-top: 9.5%;
-    margin-right: 10%;
+    flex-direction: column;
+    margin-top: 100px;
 }
-nav button{
-    margin-right: 3%;
-    font-size: 120%;
-    font-weight: bold;
-    padding: 0.5%;
-    border-width: 2px;
-    border-style: solid;
-    background-color: aqua;
+main a{
+    border-bottom: 2px solid pink;
+    text-decoration: none;
+    font-family:"Nanum Pen Script", "Comic Sans MS";
+    color: #432;
+    line-height: 1.7;
+    width: 100%;
+    
+    font-size: 30pt;
 }

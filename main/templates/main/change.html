@@ -9,21 +9,18 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
   </head>
 
-  <body>
-    <form action="" method="POST">
-      {% csrf_token %}
-      <header>
-        <nav>
-          <button type="submit" onclick="window.location.href='{% url 'main:change' id_data.id %}'">수정하기</button>
-        </nav>
-      </header>
+  <body>    
+    <header>
+    </header>
 
-
-      <main>
-            내용: <textarea name="content" wrap = "virtual" rows = "1" cols="50">{{ id_data.content }}</textarea>
-            상세내용: <textarea name="information" wrap = "virtual" rows = "3" cols="50">{{ id_data.information }}</textarea>
-      </main>
-    </form>
+    <main>
+      <form action="{% url 'main:change' id_data.id %}" method="POST">
+        {% csrf_token %}
+        내용: <textarea name="content" wrap = "virtual" rows = "1" cols="50">{{ id_data.content }}</textarea>
+        상세내용: <textarea name="information" wrap = "virtual" rows = "3" cols="50">{{ id_data.information }}</textarea>
+        <input type="submit" name="" value="수정하기">
+      </form>
+    </main>
 
     <footer>
       <p><small>&copy; 2021 Firoms</small></p>
