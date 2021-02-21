@@ -13,6 +13,9 @@ body {
     background-position: center top;
 }
 
+header{ 
+    
+}
 
 main{
     max-width: max-content;
@@ -22,7 +25,7 @@ main{
     padding: 3%;
     /* 상하좌우 여백 */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 100px;
 }
 main a{
@@ -32,6 +35,17 @@ main a{
     color: #432;
     line-height: 1.7;
     width: 100%;
-    
     font-size: 30pt;
+}
+form {
+    width: auto;
+    height: auto;
+}
+input {
+    font-size: 50px;
+    margin-right: 100px;
+    background-color: aqua;
+    border-width: 2px;
+    border-color: darkorange;
+    border-style: solid;
 }
