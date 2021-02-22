@@ -10,23 +10,23 @@ body {
     /* 
     비율을 유지하면서 최대한의 크기로 출력
     */
-    background-position: center top;
+    background-position: center top; 
 }
 
-header{ 
+div{
+    
     
 }
 
 main{
-    max-width: max-content;
     /* 최대 넓이를 기준으로 하게 설정 */
-    /* margin : 0 auto;  */
+    margin : 0 auto; 
     /* 가운데 정렬 */
-    padding: 3%;
+    padding: 5%;
     /* 상하좌우 여백 */
     display: flex;
-    flex-direction: row;
-    margin-top: 100px;
+    flex-direction: column;
+    margin-top: 300px;
 }
 main a{
     border-bottom: 2px solid pink;
@@ -34,18 +34,72 @@ main a{
     font-family:"Nanum Pen Script", "Comic Sans MS";
     color: #432;
     line-height: 1.7;
-    width: 100%;
     font-size: 30pt;
+    margin-bottom: 30px;
+    text-align: left;
+}
+main p{
+    border-bottom: 2px solid pink;
+    text-decoration: none;
+    font-family:"Nanum Pen Script", "Comic Sans MS";
+    color: #432;
+    line-height: 1.7;
+    font-size: 30pt;
+    margin-bottom: 30px;
+    text-align: left;
+}
+input[type="text"]{
+    border-bottom: 2px solid pink;
+    text-decoration: none;
+    font-family:"Nanum Pen Script", "Comic Sans MS";
+    color: #432;
+    line-height: 1.7;
+    font-size: 30pt;
+    margin-bottom: 30px;
+    text-align: left;
+    width: auto;
 }
 form {
     width: auto;
     height: auto;
+    text-align: right;
 }
-input {
+.write{
+    text-align: left;
+    font-size: 30pt;
+}
+input[type="submit"] {
     font-size: 50px;
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
     background-color: aqua;
-    border-width: 2px;
+    border-width: 3px;
     border-color: darkorange;
     border-style: solid;
+}
+
+textarea {
+    border-bottom: 2px solid pink;
+    text-decoration: none;
+    font-family:"Nanum Pen Script", "Comic Sans MS";
+    color: #432;
+    line-height: 1.7;
+    font-size: 30pt;
+    text-align: left;
+    resize: none;
+    /* border-width: 5px;
+    border-color: orange;
+    border-style: solid; */
+}
+
+footer{
+    background: #432;
+    text-align: center;
+    padding: 26px 0;
+
+}
+footer p {
+    color: #fff;
+    margin-top: 5px;
+    font-size: 0.875rem;
 }

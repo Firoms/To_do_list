@@ -8,16 +8,15 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}" />
   </head>
-
-  <body>    
-    <header>
-    </header>
-
+  
+  <body>
     <main>
       <form action="{% url 'main:change' id_data.id %}" method="POST">
         {% csrf_token %}
-        내용: <textarea name="content" wrap = "virtual" rows = "1" cols="50">{{ id_data.content }}</textarea>
-        상세내용: <textarea name="information" wrap = "virtual" rows = "3" cols="50">{{ id_data.information }}</textarea>
+        <div class="write">
+          <p>내용: </p><input type="text" name="content" wrap = "virtual" value={{ id_data.content }}><br>
+          <p>상세 내용: </p><input type="text" name="information" wrap = "virtual" value="{{ id_data.information }}"><br>
+        </div>
         <input type="submit" name="" value="수정하기">
       </form>
     </main>
@@ -31,6 +30,7 @@
       <a href="https://www.youtube.com/channel/UCvjZ9NUicMKNc2GzQoFeyRA/">Youtube</a>
       </p>
     </footer>
+    
   </body>
 
 </html>

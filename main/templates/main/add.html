@@ -12,14 +12,13 @@
 
 
   <body>
-    <header>
-    </header>
-    
     <main>
       <form action="{% url 'main:add' %}" method="POST">
         {% csrf_token %}
-        내용: <textarea name="content" wrap = "virtual" rows = "1" cols="50"></textarea>
-        상세내용: <textarea name="information" wrap = "virtual" rows = "3" cols="50"></textarea> 
+        <div class="write">
+          <p>내용: </p><input type="text" name="content" wrap = "virtual" rows = "1" cols="30"><br>
+          <p>상세내용: </p><input type="text" name="information" wrap = "virtual" rows = "1" cols="30"><br>
+        </div>
         <input type="submit" name="" value="추가하기">
       </form>
     </main>
