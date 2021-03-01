@@ -29,6 +29,6 @@ PC 서버에서 확인해 볼 수 있습니다.
     새로운 프로젝트에 도전하며 Django와 Html & CSS 에 조금이나마 익숙해져보려 합니다.   
 ***
 ## 실행사진
-<img src="https://user-images.githubusercontent.com/63716450/106448834-a46f6c80-64c6-11eb-985e-dd6de855c1d7.PNG"  width="500" height="500">
-<img src="https://user-images.githubusercontent.com/63716450/106448842-a6d1c680-64c6-11eb-8ae9-e9d358fc4108.PNG"  width="500" height="500">
-<img src="https://user-images.githubusercontent.com/63716450/106448849-a89b8a00-64c6-11eb-9ae0-5f9fdbe6a6ee.PNG"  width="500" height="500">
+<img src="https://user-images.githubusercontent.com/63716450/109478018-10d88e00-7abc-11eb-8074-2e2aebd70d9b.PNG"  width="900" height="500">
+<img src="https://user-images.githubusercontent.com/63716450/109478019-11712480-7abc-11eb-8e0f-dc9d87f6274a.PNG"  width="900" height="500">
+<img src="https://user-images.githubusercontent.com/63716450/109478014-0fa76100-7abc-11eb-94c7-d14bf7a61648.PNG"  width="900" height="500">
